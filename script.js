@@ -14,3 +14,18 @@ function getComputerChoice() {
 
     return computer_choice;
 }
+
+function getHumanChoice() {
+    let human_input = prompt("Enter rock, paper, or scissors: ");
+    human_input = human_input.toLowerCase();
+    
+    if (
+        human_input === "rock"
+        || human_input === "paper"
+        || human_input === "scissors"
+    ) {
+        return human_input;
+    } else {
+        return null;
+    }
+}
