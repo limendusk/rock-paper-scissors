@@ -12,6 +12,14 @@ buttons.forEach((button) => {
         () => playRound(button.textContent.toLowerCase(), getComputerChoice()));
 });
 
+const reset_button = document.querySelector(".reset-button");
+reset_button.addEventListener("click", 
+    () => { 
+        [choice_text, round_outcome, running_score, game_outcome].forEach((text) => { text.textContent = "" });
+        human_score = 0;
+        computer_score = 0;
+});
+
 function getComputerChoice() {
     let computer_choice;
 
