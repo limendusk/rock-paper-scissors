@@ -1,6 +1,5 @@
 let human_score = 0;
 let computer_score = 0;
-let rounds_played = 0;
 
 const result_container = document.querySelector(".result-container");
 
@@ -32,7 +31,6 @@ function getComputerChoice() {
 
 function playRound(human_choice, computer_choice) {
 
-    rounds_played++;
     choice_text.textContent = `Your choice: ${human_choice}, Computer choice: ${computer_choice}`;
     round_outcome.textContent = "Round outcome: ";
     game_outcome.textContent = "";
@@ -72,20 +70,15 @@ function playRound(human_choice, computer_choice) {
     }
 
     round_outcome.append(result);
-    running_score.textContent = `Your score: ${human_score}, Computer score: ${computer_score} — ${rounds_played} out of 5 rounds`;
+    running_score.textContent = `Your score: ${human_score}, Computer score: ${computer_score}`;
     
-    // Announce the results of the game after 5 rounds
-    // and reset the running score.
-    if (rounds_played === 5) {
+    if (human_score === 5 || computer_score === 5) {
         game_outcome.textContent = "Game outcome: ";
         if (human_score > computer_score) {
             game_outcome.append("You won!");
-        } else if (human_choice < computer_score) {
-            game_outcome.append("You lost!");
         } else {
-            game_outcome.append("It's a draw!");
+            game_outcome.append("You lost!");
         }
-        rounds_played = 0;
         human_score = 0;
         computer_score = 0;
     }
