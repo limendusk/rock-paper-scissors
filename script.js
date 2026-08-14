@@ -39,7 +39,7 @@ function getComputerChoice() {
 
 function playRound(human_choice, computer_choice) {
 
-    choice_text.textContent = `Your choice: ${human_choice}, Computer choice: ${computer_choice}`;
+    choice_text.textContent = `Your choice: ${human_choice} — Computer choice: ${computer_choice}`;
     round_outcome.textContent = "Round outcome: ";
     game_outcome.textContent = "";
 

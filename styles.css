@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 75vw;
+    min-height: 60vh;
+    padding: 10% 10%;
+    background-color: aliceblue;
+}
+
+.button-container, .result-container {
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+}
+
+.button-container {
+    flex: 1 0 0;
+    align-items: flex-end;
+}
+
+.result-container {
+    flex: 2 0 0;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.choice, .reset-button {
+    width: 120px;
+    height: 36px;
+    gap: 24px;
+}
+
+.reset-button {
+    margin-left: 16px;
+}
